@@ -1,0 +1,330 @@
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.5s;
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.75;
+  color: var(--third-color);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  line-height: 2em;
+}
+.IVA {
+  margin: 1.2em;
+  text-align: center;
+}
+.hero-2 {
+  height: 30vh;
+}
+.menu {
+  display: none; /* Por defecto, la lista de categorías está oculta */
+}
+
+.menu-open {
+  display: block; /* Mostrar la lista de categorías cuando 'menuOpen' es verdadero */
+}
+.logo {
+  width: 100px;
+}
+/**************** Estilos para el encabezado navegable pequeno area carrito(header2)****************/
+.header-carrito {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5em;
+  max-width: 80%;
+}
+
+/* Estilos para el icon carrito */
+.carritoIcon {
+  margin: 1em;
+  width: 3em;
+}
+
+/* Estilos para el formulario de búsqueda */
+.busqueda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  gap: 1em;
+  margin: 0;
+}
+input[type="text"] {
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 2%;
+  padding: 0.6vw 1vw;
+  margin: 0.5vw 1vw;
+  display: inline-block;
+  border: 1vw;
+  box-sizing: border-box;
+}
+
+.busqueda button[type="submit"] {
+  background-color: var(--link-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  width: 5em;
+}
+
+/* Estilos para los enlaces de inicio de sesión y registro */
+.sesion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sesion a {
+  color: #fff;
+  text-decoration: none;
+  margin: 1em;
+  padding: 0.5em 1em;
+}
+
+.boton-registro {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/************ Estilos para el menú de categorías *******************/
+.filtro-categorias {
+  grid-column: span 12; /* Ocupa 12 columnas en dispositivos móviles */
+  padding: 1em;
+  align-items: center;
+  height: 100%;
+}
+
+.categoria-link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.categoria-link img {
+  margin-right: 15px;
+}
+/**********Estilos para el contenedor principal area productos*******************/
+
+.contenedor-principal-carrito {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* Grid de 12 columnas */
+  background-color: #f2f2f2; /* Color de fondo de la grilla */
+  padding: 0.5em;
+  justify-items: center;
+  gap: 20px;
+}
+/************ Estilos para la zona de productos *******************/
+
+.productos-contain {
+  grid-column: span 12; /* Ocupa 12 columnas en dispositivos móviles */
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  min-height: 55vh; /* Establece la altura del contenedor */
+  width: 100%;
+}
+.contenedorProductos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+  max-height: 80vh;
+  width: 100%;
+}
+.productos-area {
+  display: flex;
+  flex-direction: column;
+}
+.producto {
+  background-color: #fff;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 1em;
+  max-width: 15em; /* Ancho  de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  grid-column: span 3;
+} /*Ocupa 3 columnas dentro del sistema de 12 columnas */
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5em;
+}
+
+/* Estilos para el botón Agregar/quitar al Carrito */
+
+.producto button {
+  background-color: var(--link-color);
+  color: var(--background-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+/***** Estilos div MI COMPRA*****/
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 1em;
+  border: thick solid var(--gray-light-color);
+  border-radius: 5px;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+.contenedor-carrito button {
+  background-color: beige;
+  color: var(--text-color);
+}
+.areaTitulo-miCompra {
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+}
+.areaMain-miCompra button {
+  width: 2em;
+  background-color: beige;
+}
+.item img {
+  width: 5em;
+}
+
+.agregaCantidad-miCompra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+#carrito-vacio {
+  margin: 2em;
+}
+/* /**********MEDIA QUERIES************/
+/*Tabletas en posición vertical (Retrato) */
+
+@media screen and (min-width: 576px) {
+  .productos-contain {
+    grid-column: span 9;
+    gap: 3em;
+  }
+
+  .filtro-categorias {
+    grid-column: span 3;
+  }
+
+  .producto {
+    max-width: 10em;
+  }
+
+  .busqueda input[type="text"] {
+    width: 20em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-navegacion {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-navegacion > * {
+    margin-right: 10px; /* Espacio entre elementos */
+  }
+  .busqueda,
+  .sesion {
+    flex-direction: row;
+    align-items: center;
+  }
+  .busqueda input[type="text"] {
+    width: 30em;
+  }
+  .productos-contain {
+    grid-column: span 8;
+  }
+
+  .filtro-categorias {
+    grid-column: span 4;
+  }
+  .contenedorProductos {
+    justify-content: space-between;
+  }
+  .producto {
+    max-width: 12em;
+  }
+  .productos-area {
+    display: flex;
+    flex-direction: row; /* Los elementos se colocarán en una fila horizontal */
+    gap: 3em;
+  }
+  .menu {
+    display: block; /* Mostrar la lista de categorías siempre en pantallas más grandes */
+  }
+  .hamburger-menu,
+  .close-icon {
+    display: none; /* Ocultar los botones en pantallas más grandes */
+  }
+}
+
+/* Media queries para pantallas grandes (ejemplo: 992px) */
+
+@media screen and (min-width: 992px) {
+  .productos-contain {
+    grid-column: span 10;
+  }
+  .producto {
+    max-width: 15em;
+  }
+  .filtro-categorias {
+    grid-column: span 2;
+  }
+  .menu-navegacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu {
+    display: block; /* Mostrar la lista de categorías siempre en pantallas más grandes */
+  }
+  .hamburger-menu,
+  .close-icon {
+    display: none; /* Ocultar los botones en pantallas más grandes */
+  }
+  .contenedor-carrito {
+    width: 30vw;
+  }
+}

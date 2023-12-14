@@ -1,0 +1,355 @@
+/*Proyecto Codo Full Stack Python- Comision 23537
+Integrantes del grupo (por orden de inscripción al grupo):
+                                    Alias	      GitHub
+          1	Elizabeth Mc Nally	    ESMN 	  EliMCN	https://github.com/EliMCN
+
+          2	Marisol Belliard	       MB	    MarisolBell	https://github.com/MarisolBell
+
+          3	Alicia Aramayo	         AA	    AramAli24	https://github.com/AramAli24
+
+          4	Natalia Monterubbianesi	NM	    Nat-Monte	https://github.com/Nat-Monte "
+*/
+
+/* ********** Custom Properties ********** */
+
+/* Variables de color */
+:root {
+  --primary-color: rgb(137, 170, 201);
+  --background-color: rgb(249, 245, 240);
+  --dark-color: rgb(21, 21, 21);
+  /*colores micrositio productos*/
+  --first-color: #89aac9;
+  --first-alpha-color: rgba(137, 170, 201, 0.75);
+  --second-color: #b7346f;
+  --second-alpha-color: rgba(204, 93, 143, 0.75);
+  --third-color: rgb(224, 196, 33);
+  --third-alpha-color: rgba(238, 217, 102, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: col #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --box-shadow: rgba(0, 0, 0, 0.25);
+  --link-color: rgb(252, 0, 0);
+  --button-shop-color: rgb(255, 102, 0);
+  --title-color: #333;
+  --text-color: #222;
+  --white-alpha-color: rgba(249, 245, 240, 0.75);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: "Roboto", sans-serif;
+}
+/* ********** Reset ********** 
+  Agrego reseteo de la pagina para trabajar con border box para maquetar*/
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 1em;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/********************** ESTILOS GENERALES*********************/
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  height: 100%;
+}
+
+.container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 1em 2em;
+}
+
+h2 {
+  font-family: "Pacifico", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-color);
+  transition: all 0.5s;
+  font-weight: bold;
+}
+
+a:hover {
+  opacity: 0.75;
+  color: var(--third-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.85em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+.title-gris {
+  color: var(--gray-dark-color);
+  font-weight: 500;
+}
+.title-gris:hover {
+  color: var(--link-color);
+}
+
+/***************************HERO***************************/
+.hero {
+  width: 100%;
+  min-height: 50vh;
+  background-image: url("../Imagenes/assets/Hero-ShopOnline.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+.superposicion-semi-transparente {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
+  position: absolute; /* Posición absoluta para superponer */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ancho completo del elemento padre */
+  height: 100%; /* Alto completo del elemento padre */
+  z-index: 1; /* Asegura que esté por debajo del contenido de texto */
+}
+.welcome-banner {
+  position: absolute;
+  top: 50%; /* Ajusta la posición vertical */
+  left: 50%; /* Ajusta la posición horizontal */
+  transform: translate(-50%, -50%); /* Centra el contenido */
+  z-index: 999;
+}
+
+.welcome-banner h1 {
+  color: var(--white-color);
+  text-shadow: 1px 1px 5px var(--gray-light-color);
+  font-size: 2.5em;
+}
+
+.welcome-banner p {
+  color: var(--white-color);
+  text-shadow: 2px 2px 5px var(--black-color);
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+button {
+  background-color: var(--link-color);
+  transition: transform 0.2s;
+  /* Agregamos una transición suave para transformaciones */
+  max-width: 150px; /* maximo para controlar el tamaño */
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 1.5%; /* cambio a % para que se responsivo y no desborde al achicar*/
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  margin: 0.5em;
+}
+
+/* Estilo cuando el mouse pasa sobre el botón */
+button:hover {
+  transform: scale(1.05);
+  /* Hace que el botón se agrande ligeramente */
+  background-color: #29296f;
+  /* Cambia el color de fondo al pasar el mouse */
+  cursor: pointer;
+}
+
+/******************** Estilos para el carrusel ***************************/
+.carousel-container {
+  overflow: hidden;
+  max-width: 1600px;
+  min-width: 600px;
+  height: 50vh;
+  margin: 1em;
+}
+
+.carousel {
+  display: flex; /* Muestra las diapositivas en línea */
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  width: 100%;
+  /* Añade una propiedad para hacer que las diapositivas se trasladen horizontalmente */
+  transform: translateX(0);
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.slide img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin distorsionar y recorta el exceso si es necesario */
+}
+.marcas {
+  background-color: white;
+}
+
+.marcas-productos h3,
+.marcas-productos h4 {
+  text-align: center;
+  margin: 2em 1em;
+}
+
+#prev-button,
+#next-button {
+  cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
+  padding: 10px; /* Ajusta el espaciado interior de los botones */
+  background-color: var(--link-color);
+  color: #fff;
+  border: thin solid black;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%; /* Coloca los botones en el centro verticalmente */
+  transform: translateY(-50%);
+}
+#prev-button {
+  left: 30px; /* Coloca el botón "Anterior" a la izquierda del carrusel */
+}
+
+#next-button {
+  right: 30px; /* Coloca el botón "Siguiente" a la derecha del carrusel */
+}
+#prev-button:hover,
+#next-button:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el mouse por encima de los botones */
+}
+
+/******Estilos seccion de Inicio sesion / Registracion de usuario****/
+
+.inicia-o-registracion,
+.cards-links-pags {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 50vh;
+  background-image: url("../Imagenes/assets/notebookSchoolbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 20em 0;
+  gap: 3em;
+}
+.registracion,
+.inicia-sesion,
+.a-shop,
+.card-a-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(212, 229, 246);
+  gap: 1em;
+  margin: 1.5em 0;
+}
+
+/* estilos para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .welcome-banner p {
+    display: none;
+  }
+  .carousel-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  /* estilos para tabletas en orientación vertical */
+  .welcome-banner p {
+    display: none;
+  }
+  .inicia-o-registracion,
+  .cards-links-pags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .registracion,
+  .inicia-sesion,
+  .a-shop,
+  .card-a-contacto {
+    max-width: 250px;
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 2000px) {
+  /* estilos para tabletas en orientación horizontal */
+
+  .inicia-o-registracion,
+  .cards-links-pags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5em;
+  }
+
+  .registracion,
+  .inicia-sesion,
+  .a-shop,
+  .card-a-contacto {
+    max-width: 450px;
+    height: 250px;
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Agrego etiquetas meta: description, author,theme-color -->
+  <meta name="description"
+    content="Papelera Zarate venta de productos de papeleria, libreria comercial, escolar, y juguetria por mayor y menor. Resuelve su necesidad en papeles. Envio a domicilio.         
+      Este sitio es parte del trabajo práctico del curso Full Stack Python 2023, 2do. cuatrimestre del programa Codo a Codo 4.0. App web para Libreria y jugueteria." />
+  <meta name="author"
+    content="Integrantes del grupo (por orden de inscripción al grupo): Alias GitHub 1 Elizabeth Mc Nally ESMN EliMCN https://github.com/EliMCN 2 Marisol Belliard MB MarisolBell https://github.com/MarisolBell 3 Alicia Aramayo AA AramAli24 https://github.com/AramAli24 4 Natalia Monterubbianesi NM Nat-Monte https://github.com/Nat-Monte " />
+  <meta name="theme-color" content="rgb(137, 170, 201)" />
+
+  <!-- Algunas Etiquetas Open Graph comunes que se utilizan para mejorar la presentación de enlaces compartidos en redes sociales: -->
+
+  <meta property="og:title" content="Papelera Zarate Contacto" />
+  <meta property="og:image" content="./Imagenes/img_sitio_productos/Favicon.PNG" />
+  <meta property="og:description"
+    content="Papelera Zarate venta de productos de papeleria, libreria comercial, escolar, y juguetria por mayor y menor. Resuelve su necesidad en papeles. Envio a domicilio.         
+      Este sitio es parte del trabajo práctico del curso Full Stack Python 2023, 2do. cuatrimestre del programa Codo a Codo 4.0. App web para Libreria y jugueteria." />
+  <link rel="canonical" href="./index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://papelerazarate.netlify.app" />
+  <meta property="og:site_name" content="Papelera Zarate" />
+
+  <!-- Title del sitio Lo personalizo para c/sitio de la app-->
+  <title>Papelera Zarate Contacto</title>
+
+  <!-- Link a estilos-->
+
+  <link rel="stylesheet" href="./css/estilos.css" />
+
+
+
+
+  <!-- Cambio logo Favicon a Papelera Zarate 16px y 32px- -->
+
+  <link rel="icon" type="image/png" sizes="16x16" href="./Imagenes/img_sitio_productos/Favicon.PNG" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="Imagenes/img_sitio_productos/Favicon.PNG" />
+
+  <!--  Animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Google fonts -->
+  <!-- Enlace para la fuente Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Enlace para la fuente Pacifico -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+  <!-- Google icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
+  <header id="header"></header>
+  <main class="login">
+
+    <div class="clientes-container">
+      <!-- Formulario para Usuarios Registrados -->
+      <div class="form-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="formRegistrado" method="POST" action="./login.html">
+          <!-- Formulario de login para usuarios registrados -->
+          <label for="NameRegistrado">Usuario:</label>
+          <input type="text" name="nombre_usuario" id="NameRegistrado" class="form-input"
+            placeholder="administrador/cliente" />
+          <label for="PassRegistrado">Password:</label>
+          <input type="password" name="password" id="PassRegistrado" class="form-input" placeholder="clave123!" />
+          <input type="submit" value="Enviar" class="form-submit" />
+          <p>Al menos 6 caracteres, una letra y un número</p>
+        </form>
+        <aside>
+          <a href="./carrito.html">
+            <img src="./Imagenes/Discount-Free-PNG-Image.png" alt="imagen de descuentos">
+          </a>
+        </aside>
+      </div>
+
+
+      <!-- Formulario para Nuevos Clientes -->
+      <div class="form-container" id="appNuevoCliente">
+        <h1>Nuevo Cliente</h1>
+        <h2>Si aún no tienes cuenta, Regístrate</h2>
+        <p>Al ingresar al sitio, estás aceptando los "Términos y Condiciones"</p>
+        <div class="clientes-container">
+          <form>
+            <div class="mb-3">
+              <label for="nombre">Nombre: </label>
+              <input class="form-input" type="text" name="nombre" id="nombre" v-model="nombre" placeholder="Usuario"
+                required />
+            </div>
+            <div class="mb-3">
+              <label for="direccion">Dirección :</label>
+              <input class="form-input" type="text" name="direccion" id="direccion" v-model="direccion"
+                placeholder="Dirección" required />
+            </div>
+            <div class="mb-3">
+              <label for="telefono">Teléfono:</label>
+              <input class="form-input" type="tel" name="telefono" id="telefono" v-model="telefono"
+                placeholder="Teléfono" required />
+            </div>
+            <div class="mb-3">
+              <label for="correo_electronico">Correo Electrónico:</label>
+              <input class="form-input" type="email" name="correo_electronico" id="correo_electronico"
+                v-model="correo_electronico" placeholder="Correo Electrónico" required />
+            </div>
+            <div class="mb-3">
+              <label for="nombre_usuario">Nombre de Usuario:</label>
+              <input class="form-input" type="text" name="nombre_usuario" id="nombre_usuario" v-model="nombre_usuario"
+                placeholder="Nombre de Usuario" required />
+            </div>
+            <div class="mb-3">
+              <label for="password">Password:</label>
+              <input class="form-input" type="password" name="password" id="password" v-model="password"
+                placeholder="password" required />
+            </div>
+            <div class="mb-3">
+              <button type="button" class="btn-registroNuevo " v-on:click="grabar()">
+                Enviar
+              </button>
+              <p>password: Al menos 6 caracteres, una letra y un número</p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <hr />
+  <footer id="footer"></footer>
+
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/validar_login.js"></script>
+  <script src="./js/registro_Cliente.js"></script>
+</body>
+
+</html>

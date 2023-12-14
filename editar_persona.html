@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Editar Persona</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+  <link rel="icon" href="./assets/Favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/estilosGestion.css" />
+  <!-- Fontawesone -->
+  <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="idheader">
+    <!-- Coloca la barra de navegación aquí -->
+  </header>
+  <main>
+    <div class="container" id="app">
+      <form class="form cuerpo">
+        <h1 style="text-align: center">Editar Persona</h2>
+          <div class="mb-3">
+            <label for="id">ID</label>
+            <input type="number" name="id" id="id" disabled v-model="id" />
+          </div>
+          <div class="mb-3">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="nombre" />
+          </div>
+          <div class="mb-3">
+            <label for="direccion">Dirección</label>
+            <input type="text" name="direccion" id="direccion" v-model="direccion" />
+          </div>
+          <div class="mb-3">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono" v-model="telefono" />
+          </div>
+          <div class="mb-3">
+            <label for="correo_electronico">Correo Electrónico</label>
+            <input type="email" name="correo_electronico" id="correo_electronico" v-model="correo_electronico" />
+          </div>
+          <div class="mb-3">
+            <label for="nombre_usuario">Nombre de Usuario:</label>
+            <input type="text" name="nombre_usuario" id="nombre_usuario" v-model="nombre_usuario" />
+          </div>
+          <div class="mb-3">
+            <label for="password">password:</label>
+            <input type="password" name="password" id="password" v-model="password" />
+          </div>
+          <div class="mb-3">
+            <label for="rol">Rol:</label>
+            <input type="text" name="rol" id="rol" v-model="rol" />
+          </div>
+
+          <button type="button" class="btn btn-success" v-on:click="modificar()">
+            Grabar
+          </button>
+      </form>
+    </div>
+  </main>
+  <footer id="idfooter">
+    <!-- Coloca el pie de página aquí -->
+  </footer>
+  <!-- Bibliotecas de JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/editar_persona.js"></script>
+</body>
+
+</html>

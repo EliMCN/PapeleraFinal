@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Producto Nuevo</title>
+  <link rel="icon" href="./assets/Favicon.ico" type="image/x-icon" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <!-- Fontawesone -->
+  <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/estilosGestion.css" />
+</head>
+
+<body>
+  <header id="idheader"></header>
+  <main>
+    <div class="container" id="app-gestion-productos">
+      <form class="form cuerpo" id=formularioNuevoProducto" action="#">
+        <h1 style=" text-align: center">Nuevo Producto</h1>
+        <br />
+        <div class="mb-3">
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" v-model="nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="precio">Precio</label>
+          <input type="number" step="any" name="precio" id="precio" v-model="precio" maxlength="11" required />
+        </div>
+        <div class="mb-3">
+          <label for="fecha">Fecha</label>
+          <input type="text" name="fecha" id="fecha" v-model="fecha" />
+        </div>
+        <div class="mb-3">
+          <label for="barra">Barra</label>
+          <input type="text" name="barra" id="barra" v-model="barra" />
+        </div>
+        <div class="mb-3">
+          <label for="unidadpaquete">Unidad paquete</label>
+          <input type="number" name="unidadpaquete" id="unidadpaquete" v-model="unidadpaquete" />
+        </div>
+        <div class="mb-3">
+          <label for="unidadcaja">Unidad cajas</label>
+          <input type="number" name="unidadcaja" id="unidadcaja" v-model="unidadcaja" />
+        </div>
+        <div class="mb-3">
+          <label for="preciounitario">Precio unitario</label>
+          <input type="number" step="any" name="preciounitario" id="preciounitario" v-model="preciounitario"
+            maxlength="11" required />
+        </div>
+        <div class="mb-3">
+          <label for="conutilidad">Precio c/utilidad</label>
+          <input type="number" step="any" name="conutilidad" id="conutilidad" v-model="conutilidad" maxlength="11"
+            required />
+        </div>
+        <div class="mb-3">
+          <label for="categoria">Categoría</label>
+          <select name="categoria" id="categoria" v-model="categoria">
+            <option value="Agendas">Agendas</option>
+            <option value="Artística">Artística</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Escolar">Escolar</option>
+            <option value="Regaleria">Regaleria</option>
+            <option value="Resmas y Papeles">Resmas y Papeles</option>
+            <option value="Tecnico">Tecnico</option>
+            <option value="Tecnologia">Tecnologia</option>
+          </select>
+          <div class="mb-3">
+            <label for="stock">Stock</label>
+            <input type="number" name="stock" id="stock" v-model="stock" />
+          </div>
+          <div class="mb-3">
+            <label for="imagen">Imagen</label>
+            <input type="text" name="imagen" id="imagen" v-model="imagen" />
+            <img width="100" :src="imagen" alt="" />
+          </div>
+          <button type="button" class="btn btn-success" v-on:click="grabar()">
+            Grabar
+          </button>
+      </form>
+    </div>
+  </main>
+  <footer id="idfooter"></footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/gestionProductos.js"></script>
+
+</body>
+
+</html>

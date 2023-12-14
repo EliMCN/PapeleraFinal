@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Papelera Zarate - Gestion Usuarios</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+
+  <link rel="icon" href="./assets/Favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/estilosGestion.css" />
+</head>
+
+<body>
+  <header id="idheader"></header>
+  <main>
+    <div class="container app_contenido" id="app">
+      <br />
+      <h1 class="title">Usuarios</h1>
+      <br />
+      <section v-if="errored">
+        <p>
+          Lo sentimos, no es posible obtener la información en este momento,
+          por favor intente nuevamente
+        </p>
+      </section>
+      <section v-else>
+        <div v-if="loading">
+          <p>Cargando datos...</p>
+          <div class="spinner-border" role="status">
+            <!--Boostrap-->
+            <span class="sr-only"></span>
+            <!--Este span vacio, garantiza que pueda ser visto el spinner para lectores de pantalla, para discapacidad visual, buena practica!-->
+          </div>
+        </div>
+        <div v-else class="cuerpo">
+          <a href="ingresar_persona.html" class="btn btn-nuevo btn-success">Nuevo</a>
+          <br /><br />
+          <div class="table-container">
+            <table class="table table-striped table-responsive app_contenido">
+              <tr class="sticky-header">
+                <th class="col-1 col-sm-2">Id</th>
+                <th class="col-3 col-sm-2">Nombre</th>
+                <th class="col-2 col-sm-2 d-none d-md-table-cell">Direccion</th>
+                <th class="col-2 col-sm-2 d-none d-md-table-cell">telefono</th>
+                <th class="col-2 col-sm-2 d-none d-md-table-cell">Correo_electronico</th>
+                <th class="col-2 col-sm-1 d-none d-md-table-cell">Nombre de Usuario</th>
+                <th class="col-2 col-sm-1 d-none d-md-table-cell">password</th>
+                <th class="col-2 col-sm-1 d-none d-md-table-cell">Rol</th>
+                <th class="col-3 col-sm-2">Acciones</th>
+              </tr>
+
+              <tr class="" v-for="persona in personas">
+                <td class="col-1 col-sm-2">{{persona.id}}</td>
+                <td class="col-3 col-sm-2">{{persona.nombre}}</td>
+                <td class="col-2 col-sm-2 d-none d-md-table-cell">{{persona.direccion}}</td>
+                <td class="col-2 col-sm-2 d-none d-md-table-cell">{{persona.telefono}}</td>
+                <td class="col-2 col-sm-2 d-none d-md-table-cell">{{persona.correo_electronico}}</td>
+                <td class="col-2 col-sm-1 d-none d-md-table-cell">{{persona.nombre_usuario}}</td>
+                <td class="col-2 col-sm-1 d-none d-md-table-cell">{{persona.password}}</td>
+                <td class="col-2 col-sm-1 d-none d-md-table-cell">{{persona.rol}}</td>
+                <td class="col-3 col-sm-2">
+                  <a class="btn btn-primary" :href="'editar_persona.html?id='+ persona.id">Editar</a>
+                  <button type="button" v-on:click="eliminar(persona.id)" class="btn btn-danger">
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer id="idfooter">
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/personas.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Agrego etiquetas meta: description, author,theme-color -->
+  <meta name="description"
+    content="Papelera Zarate venta de productos de papeleria, libreria comercial, escolar, y juguetria por mayor y menor. Resuelve su necesidad en papeles. Envio a domicilio.         
+      Este sitio es parte del trabajo práctico del curso Full Stack Python 2023, 2do. cuatrimestre del programa Codo a Codo 4.0. App web para Libreria y jugueteria." />
+  <meta name="author" content="				
+          Integrantes del grupo (por orden de inscripción al grupo):
+                                    Alias	      GitHub
+          1	Elizabeth Mc Nally	    ESMN 	  EliMCN	https://github.com/EliMCN
+
+          2	Marisol Belliard	       MB	    MarisolBell	https://github.com/MarisolBell
+
+          3	Alicia Aramayo	         AA	    AramAli24	https://github.com/AramAli24
+
+          4	Natalia Monterubbianesi	NM	    Nat-Monte	https://github.com/Nat-Monte				
+    " />
+  <meta name="theme-color" content="rgb(137, 170, 201)" />
+
+  <!-- Algunas Etiquetas Open Graph comunes que se utilizan para mejorar la presentación de enlaces compartidos en redes sociales: -->
+
+  <meta property="og:title" content="Papelera Zarate Contacto" />
+  <meta property="og:image" content="./Imagenes/img_sitio_productos/Favicon.PNG" />
+  <meta property="og:description"
+    content="Papelera Zarate venta de productos de papeleria, libreria comercial, escolar, y juguetria por mayor y menor. Resuelve su necesidad en papeles. Envio a domicilio.         
+      Este sitio es parte del trabajo práctico del curso Full Stack Python 2023, 2do. cuatrimestre del programa Codo a Codo 4.0. App web para Libreria y jugueteria." />
+  <link rel="canonical" href="./index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://papelerazarate.netlify.app" />
+  <meta property="og:site_name" content="Papelera Zarate" />
+
+  <!-- Title del sitio Lo personalizo para c/sitio de la app-->
+  <title>Papelera Zarate Contacto</title>
+
+  <!-- Link a estilos-->
+
+  <link rel="stylesheet" href="./css/estilos.css" />
+
+  <!-- Cambio logo Favicon a Papelera Zarate 16px y 32px-(ESMN) -->
+
+  <link rel="icon" type="image/png" sizes="16x16" href="./Imagenes/img_sitio_productos/Favicon.PNG" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="Imagenes/img_sitio_productos/Favicon.PNG" />
+
+  <!--  Animate -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Google fonts -->
+  <!-- Enlace para la fuente Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Enlace para la fuente Pacifico -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+
+  <!-- Google icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body class="contact page">
+  <header></header>
+  <main>
+    <div class="contact-grid-container">
+      <div class="form-container">
+        <h1>Contáctenos</h1>
+
+        <form action="" onsubmit="return validarFormulario()">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" class="form-input" />
+
+          <label for="email">E-mail:</label>
+          <input type="email" name="email" id="email" class="form-input" />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" name="telefono" id="telefono" class="form-input" />
+
+          <label for="provincia">Provincia:</label>
+          <input type="text" name="provincia" id="provincia" class="form-input" />
+
+          <label for="pais">País:</label>
+          <input type="text" name="pais" id="pais" class="form-input" />
+
+          <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-input">
+                  Escriba aquí su mensaje
+                </textarea>
+
+          <input type="submit" value="Enviar" class="form-submit" />
+        </form>
+      </div>
+
+      <div class="iframe-container">
+        <h2>Dónde estamos</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.8347764854248!2d-59.02006412441586!3d-34.09937287313919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0b5e86522b3d%3A0xcccfbee493b33f7e!2sPapelera%20Zarate!5e0!3m2!1ses-419!2sar!4v1695401284020!5m2!1ses-419!2sar" "
+          ></iframe>
+        </div>
+
+        <div class=" opening-hours">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="2">
+                  <h2>Horario de Atención</h2>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunes a Viernes:</td>
+                <td>9:00 hs a 12:00 hs</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>15:00 hs a 19:00 hs</td>
+              </tr>
+              <tr>
+                <td>Sábados:</td>
+                <td>9:00 hs a 12:00 hs</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </main>
+
+  <hr />
+  <footer></footer>
+
+  <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+  <script src="./js/validacionFormulario.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

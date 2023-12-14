@@ -1,0 +1,94 @@
+/******* ESTILOS PREGUNTAS FRECUENTES *************/
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+.faqs_container {
+    background-color: rgb(214, 227, 240);
+    max-width: auto;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    place-items: center;
+}
+
+
+h2 {
+    font-family: var(--font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #04445b;
+
+
+}
+
+.pregunta {
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    width: 80%
+}
+
+.pregunta h3 {
+    color:red;
+}
+
+.pregunta:hover {
+    background-color: #ddd;
+}
+
+.respuesta {
+    display: none;
+    background-color: #ddd;
+    padding: 10px;
+    color: #666c
+}
+
+.pregunta:hover .respuesta {
+    display: block;
+}
+
+/**********Media Queries***********/
+
+@media screen and (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+        /*El contenido principal se verá en una sola columna*/
+
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+
+
+    main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .faqs_container {
+        background-color: rgb(214, 227, 240);
+        max-width: auto;
+        margin: auto;
+        padding: 20px;
+        display: grid;
+        grid-gap: 20px;
+        place-items: center;
+        font-size: 1.2em;
+
+
+    }
+}
